@@ -1,6 +1,10 @@
 import React from 'react'
 import "./sidebar.css"
 import {HelpOutline, PlayCircleFilledOutlined, RssFeed,Group,Bookmark,WorkOutline,Event,School, Chat} from '@mui/icons-material';
+import {Users} from "../../dummyData"
+import CloseFriend from '../closeFriend/closeFriend';
+
+
 function sidebar() {
   return (
 
@@ -60,30 +64,10 @@ function sidebar() {
 
                 <ul className='sidbearFriendList'>
 
-                  <li className='sidebarFriends'>
-                    <img className='sidebarFriendImg' src="/assets/person/02.jpg" alt="" />
-                  <span className='sidebarFriendName'>Messi</span>
-                  </li>
-                  <li className='sidebarFriends'>
-                    <img className='sidebarFriendImg' src="/assets/person/02.jpg" alt="" />
-                  <span className='sidebarFriendName'>Messi</span>
-                  </li>
-                  <li className='sidebarFriends'>
-                    <img className='sidebarFriendImg' src="/assets/person/02.jpg" alt="" />
-                  <span className='sidebarFriendName'>Messi</span>
-                  </li>
-                  <li className='sidebarFriends'>
-                    <img className='sidebarFriendImg' src="/assets/person/02.jpg" alt="" />
-                  <span className='sidebarFriendName'>Messi</span>
-                  </li>
-                  <li className='sidebarFriends'>
-                    <img className='sidebarFriendImg' src="/assets/person/02.jpg" alt="" />
-                  <span className='sidebarFriendName'>Messi</span>
-                  </li>
-                  <li className='sidebarFriends'>
-                    <img className='sidebarFriendImg' src="/assets/person/02.jpg" alt="" />
-                  <span className='sidebarFriendName'>Messi</span>
-                  </li>
+                 {Users.map((u)=>(
+                  <CloseFriend key={u.id} user={u}/>
+                 ))}
+          
                 </ul>
 
             </div>

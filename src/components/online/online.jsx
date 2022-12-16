@@ -1,0 +1,22 @@
+import React from 'react'
+import "./online.css"
+
+function online({user}) {
+  return (
+    <div>
+      
+      <li className="rightbarFriends">
+          <div className="rightbarProfileImgContainer">
+            <img className="rightbarProfileImg"
+             src={user.profilePicture} 
+             alt="" />
+             <span className="rightbarOnline"git status></span>
+          </div>
+          <span className='rightbarUsername'>{user.username}</span>
+        </li>
+
+    </div>
+  )
+}
+
+export default online

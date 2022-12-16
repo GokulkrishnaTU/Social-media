@@ -1,5 +1,7 @@
 import React from 'react'
 import "./rightbar.css"
+import {Users} from "../../dummyData"
+import Online from "../online/online"
 
 function rightbar() {
   return (
@@ -14,84 +16,9 @@ function rightbar() {
       <img className='rightbarAd' src="assets/ad.png" alt="" />
       <h4 className="rightbarTitle"> <b>Online Friends</b> </h4>
       <ul className="rightbarFriendList">
-
-        <li className="rightbarFriends">
-          <div className="rightbarProfileImgContainer">
-            <img className="rightbarProfileImg"
-             src="assets/person/neymar.jpg" 
-             alt="" />
-             <span className="rightbarOnline"git status></span>
-          </div>
-          <span className='rightbarUsername'>Neymar jr</span>
-        </li>
-
-        <li className="rightbarFriends">
-          <div className="rightbarProfileImgContainer">
-            <img className="rightbarProfileImg"
-             src="assets/person/neymar.jpg" 
-             alt="" />
-             <span className="rightbarOnline"git status></span>
-          </div>
-          <span className='rightbarUsername'>Neymar jr</span>
-        </li>
-
-
-
-        <li className="rightbarFriends">
-          <div className="rightbarProfileImgContainer">
-            <img className="rightbarProfileImg"
-             src="assets/person/neymar.jpg" 
-             alt="" />
-             <span className="rightbarOnline"git status></span>
-          </div>
-          <span className='rightbarUsername'>Neymar jr</span>
-        </li>
-
-
-
-        <li className="rightbarFriends">
-          <div className="rightbarProfileImgContainer">
-            <img className="rightbarProfileImg"
-             src="assets/person/neymar.jpg" 
-             alt="" />
-             <span className="rightbarOnline"git status></span>
-          </div>
-          <span className='rightbarUsername'>Neymar jr</span>
-        </li>
-
-
-
-
-        <li className="rightbarFriends">
-          <div className="rightbarProfileImgContainer">
-            <img className="rightbarProfileImg"
-             src="assets/person/neymar.jpg" 
-             alt="" />
-             <span className="rightbarOnline"git status></span>
-          </div>
-          <span className='rightbarUsername'>Neymar jr</span>
-        </li>
-
-
-
-
-
-        <li className="rightbarFriends">
-          <div className="rightbarProfileImgContainer">
-            <img className="rightbarProfileImg"
-             src="assets/person/neymar.jpg" 
-             alt="" />
-             <span className="rightbarOnline"git status></span>
-          </div>
-          <span className='rightbarUsername'>Neymar jr</span>
-        </li>
-
-
-
-
-
-
-
+        {Users.map((u)=>(
+          <Online key={u.id} user={u}/>
+        ))}
 
         
       </ul>
