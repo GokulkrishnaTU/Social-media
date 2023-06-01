@@ -1,7 +1,7 @@
 import "./share.css";
 import {PermMedia, Label,Room, EmojiEmotions} from "@mui/icons-material"
 
-export default function Share() {
+ function Share() {
   return (
     <div className="share">
       <div className="shareWrapper">
@@ -38,3 +38,7 @@ export default function Share() {
     </div>
   );
 }
+
+
+
+export default Share

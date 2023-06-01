@@ -1,8 +1,7 @@
-import { } from '@mui/icons-material'
+import { Share } from '@mui/icons-material'
 import React from 'react'
 import "./feed.css"
-import Share from "../share/Share"
-import Post from '../post/post'
+import Post from "../post/post"
 import {Posts} from "../../dummyData"
 function feed() {
   return (
